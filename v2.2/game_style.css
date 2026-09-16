@@ -3,7 +3,7 @@
      ============================================================ */
   .player {
     /* ⬇️ шрифт как у остальных элементов */
-    font-size: 1.4dvw;
+    font-size: 1.3dvw;
     font-family: "Tektur-Regular";
     text-align: center;
 
@@ -72,7 +72,7 @@
      ============================================================ */
   #username {
     /* ⬇️ ваши свойства — не трогаю */
-    font-size: 1.4dvw;
+    font-size: 1.3dvw;
     font-family: "Tektur-Bold";
     text-align: center;
 
@@ -134,7 +134,7 @@
     overflow: hidden;
     white-space: nowrap;
 
-    font-size: 1.4dvw;
+    font-size: 1.3dvw;
     font-family: "Tektur-Regular";
 
     /* Значения по умолчанию: голубой акцент */
@@ -209,15 +209,15 @@
 }
 
 .button2 {
-    font-size: 1.6dvw;  /* было 2dvw — чуть больше */
+    font-size: 1.5dvw;  /* было 2dvw — чуть больше */
 }
 
 .button3 {
-    font-size: 1.1dvw;  /* было 2dvw — чуть больше */
+    font-size: 1dvw;  /* было 2dvw — чуть больше */
 }
 
 .button4 {
-    font-size: 2dvw;  /* было 2dvw — чуть больше */
+    font-size: 1.9dvw;  /* было 2dvw — чуть больше */
 }
 
 /* ============================================================
