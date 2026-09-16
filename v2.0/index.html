@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>sc2-ffa-card-generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	
+	<!-- Made with Construct, the game and app creator :: https://www.construct.net -->
+	<meta name="generator" content="Scirra Construct">
+
+	<meta name="author" content="nerdError">
+
+	<link rel="manifest" href="appmanifest.json">
+	<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+	<link rel="icon" type="image/png" href="icons/icon-512.png">
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="game_style.css">
+	<link rel="stylesheet" href="tooltip.css">
+
+
+</head> 
+ 
+<body>
+
+	
+
+<script>
+if (location.protocol.substr(0, 4) === "file")
+{
+	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+}
+</script>
+	
+	<noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+		</div>
+	</noscript>
+	<script src="scripts/modernjscheck.js"></script>
+	<script src="scripts/supportcheck.js"></script>
+	<script src="scripts/offlineclient.js" type="module"></script>
+	<script src="scripts/main.js" type="module"></script>
+	<script src="scripts/register-sw.js" type="module"></script>
+<style>
+  /* ============================================================
+     КАСТОМНЫЙ TOOLTIP (отдельный div)
+     ============================================================ */
+  .custom-tooltip {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Внешний вид в стиле остальных элементов */
+    background: #1a1c20;
+    color: #e0e0e0;
+    border: 1px solid #3a3d44;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-family: "Tektur-Regular";
+    font-size: 14px;
+    line-height: 1.3;
+    white-space: nowrap;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5),
+                0 0 12px rgba(116, 192, 252, 0.15);
+
+    /* Чтобы не мешал кликам */
+    pointer-events: none;
+
+    /* Скрыт по умолчанию */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease,
+                visibility 0.15s ease,
+                transform 0.15s ease;
+
+    /* Поверх всего */
+    z-index: 2147483647;
+
+    /* Сдвиг для анимации появления */
+    transform: translate(-50%, calc(-100% - 6px)) translateY(4px);
+  }
+
+  .custom-tooltip.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, calc(-100% - 6px)) translateY(0);
+  }
+
+  /* Стрелочка внизу */
+  .custom-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #3a3d44;
+    margin-top: -1px;
+  }
+
+  /* Цветные варианты (по желанию) */
+  .custom-tooltip[data-color="green"] {
+    border-color: #69db7c;
+    color: #69db7c;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5),
+                0 0 12px rgba(105, 219, 124, 0.35);
+  }
+  .custom-tooltip[data-color="green"]::after { border-top-color: #69db7c; }
+
+  .custom-tooltip[data-color="red"] {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5),
+                0 0 12px rgba(255, 107, 107, 0.35);
+  }
+  .custom-tooltip[data-color="red"]::after { border-top-color: #ff6b6b; }
+</style>
+
+<script>
+
+</script>
+</body> 
+</html>
