@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Запрет кеширования на уровне HTML (meta) -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Редирект с уникальным параметром, чтобы обойти кеш целевой страницы -->
+    <meta http-equiv="refresh" content="0; url=/sc2-ffa-card-generator/v1.1/index.html?v=TIMESTAMP">
+    <title>Перенаправление...</title>
+
+    <script>
+        // Уникальный параметр на основе текущего времени — гарантирует обход кеша
+        var url = "/sc2-ffa-card-generator/v1.1/index.html?v=" + Date.now();
+        window.location.replace(url);
+    </script>
+</head>
+<body>
+</body>
+</html>
