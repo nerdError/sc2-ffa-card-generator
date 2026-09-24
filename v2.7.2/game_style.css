@@ -3,7 +3,7 @@
      ============================================================ */
   .player {
     /* ⬇️ шрифт как у остальных элементов */
-    font-size: 1.3dvw;
+    font-size: 1.4dvw;
     font-family: "Tektur-Regular";
     text-align: center;
 
@@ -134,7 +134,7 @@
     overflow: hidden;
     white-space: nowrap;
 
-    font-size: 1.2dvw;
+    font-size: 1.1dvw;
     font-family: "Tektur-Regular";
 
     /* Значения по умолчанию: голубой акцент */
@@ -209,15 +209,15 @@
 }
 
 .button2 {
-    font-size: 1.5dvw;  /* было 2dvw — чуть больше */
+    font-size: 1.4dvw;  /* было 2dvw — чуть больше */
 }
 
 .button3 {
-    font-size: 1dvw;  /* было 2dvw — чуть больше */
+    font-size: 0.95dvw;  /* было 2dvw — чуть больше */
 }
 
 .button4 {
-    font-size: 1.9dvw;  /* было 2dvw — чуть больше */
+    font-size: 1.8dvw;  /* было 2dvw — чуть больше */
 }
 
 /* ============================================================
