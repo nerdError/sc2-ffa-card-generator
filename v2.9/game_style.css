@@ -132,7 +132,7 @@
     /* На всякий случай */
     vertical-align: middle;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
 
     font-size: 1.1dvw;
     font-family: "Tektur-Regular";
