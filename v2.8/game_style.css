@@ -1,0 +1,382 @@
+/* ============================================================
+     ВЫПАДАЮЩИЙ СПИСОК ВЫБОРА ИГРОКА
+     ============================================================ */
+  .player {
+    /* ⬇️ шрифт как у остальных элементов */
+    font-size: 1.4dvw;
+    font-family: "Tektur-Regular";
+    text-align: center;
+
+    /* ⬇️ оформление в стиле слайдеров и инпутов */
+    color: #e0e0e0;
+    background: #1a1c20;
+    border: 1px solid #3a3d44;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    padding: 0 44px 0 16px; /* справа оставляем место под стрелку */
+
+    /* Кастомная стрелка */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23b197fc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='1,1.5 6,6.5 11,1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 14px;
+
+    transition: border-color 0.25s ease,
+                background-color 0.25s ease,
+                box-shadow 0.25s ease;
+  }
+
+  .player:hover {
+    border-color: #4a4d54;
+    background-color: #1f2228;
+  }
+
+  .player:focus {
+    border-color: #b197fc;
+    background-color: #1f2228;
+    box-shadow: 0 0 0 4px rgba(177, 151, 252, 0.15),
+                0 0 16px rgba(177, 151, 252, 0.35);
+  }
+
+  /* ===== Опции выпадающего списка ===== */
+  .player option {
+    background: #1a1c20;
+    color: #e0e0e0;
+    font-family: "Tektur-Regular";
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .player option:checked {
+    background: #b197fc;
+    color: #0e0f12;
+  }
+
+  /* Старые Firefox / Edge — убираем дефолтный вид */
+  .player::-ms-expand {
+    display: none;
+  }
+  
+  .player:disabled,
+  .player[disabled] {
+      opacity: 0.45;          /* было 0.6 */
+      filter: grayscale(0.6); /* лёгкое обесцвечивание */
+  }
+  
+  /* ============================================================
+     ИНПУТ ДЛЯ НИКНЕЙМА
+     ============================================================ */
+  #username {
+    /* ⬇️ ваши свойства — не трогаю */
+    font-size: 1.3dvw;
+    font-family: "Tektur-Bold";
+    text-align: center;
+
+    /* ⬇️ оформление в стиле слайдеров */
+    color: #e0e0e0;
+    background: #1a1c20;
+    border: 1px solid #3a3d44;
+    border-radius: 10px;
+    outline: none;
+    padding: 0 16px;
+    caret-color: #74c0fc;
+    transition: border-color 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+  }
+
+  #username::placeholder {
+    color: #4a4d54;
+    opacity: 1;
+  }
+
+  #username:hover {
+    border-color: #4a4d54;
+    background: #1f2228;
+  }
+
+  #username:focus {
+    border-color: #74c0fc;
+    background: #1f2228;
+    box-shadow: 0 0 0 4px rgba(116, 192, 252, 0.15),
+                0 0 16px rgba(116, 192, 252, 0.35);
+  }
+  
+.button1 {
+      /* ...ваш базовый стиль... */
+
+    /* Убираем внутренние барьеры */
+    padding: 0;
+    margin: 0;
+
+    /* Центрируем текст по обеим осям */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Убираем влияние шрифта на вертикальное положение */
+    line-height: 1;
+
+    /* Убираем "текстовые" отступы */
+    text-indent: 0;
+    letter-spacing: 0;
+
+    /* Убираем дефолтные стили браузера */
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* На всякий случай */
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-size: 1.1dvw;
+    font-family: "Tektur-Regular";
+
+    /* Значения по умолчанию: голубой акцент */
+    --accent: #74c0fc;
+    --accent-rgb: 116, 192, 252;
+
+    color: #e0e0e0;
+    background: #1a1c20;
+    border: 1px solid #3a3d44;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    /* padding: 0 16px; */
+    transition: border-color 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease,
+                transform 0.15s ease,
+                color 0.25s ease;
+}
+
+.button1:hover {
+    border-color: var(--accent);
+    background: #1f2228;
+    color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.12),
+                0 0 16px rgba(var(--accent-rgb), 0.45);
+}
+
+.button1:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 2px rgba(var(--accent-rgb), 0.2),
+                0 0 10px rgba(var(--accent-rgb), 0.4);
+}
+
+.button1:focus-visible {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.25),
+                0 0 16px rgba(var(--accent-rgb), 0.5);
+}
+
+/* ============================================================
+   СОСТОЯНИЕ "ВЫКЛЮЧЕНО"
+   Ловим и :disabled, и [disabled] — на случай разных движков
+   ============================================================ */
+.button1:disabled,
+.button1[disabled] {
+    color: #4a4d54;                 /* тусклый текст */
+    background: #14161a;            /* фон темнее обычного */
+    border-color: #2a2d34;          /* рамка почти не видна */
+    cursor: not-allowed;            /* курсор "нельзя" */
+    box-shadow: none;               /* убираем любые свечения */
+    transform: none;                /* убираем сжатие */
+    opacity: 0.6;                   /* общий приглушённый вид */
+    pointer-events: auto;           /* оставляем, чтобы курсор not-allowed работал */
+    transition: none;               /* без анимаций — элемент "мёртв" */
+}
+
+/* На всякий случай гасим hover/active/focus у выключенной кнопки */
+.button1:disabled:hover,
+.button1:disabled:active,
+.button1:disabled:focus,
+.button1:disabled:focus-visible,
+.button1[disabled]:hover,
+.button1[disabled]:active,
+.button1[disabled]:focus,
+.button1[disabled]:focus-visible {
+    color: #4a4d54;
+    background: #14161a;
+    border-color: #2a2d34;
+    box-shadow: none;
+    transform: none;
+}
+
+.button2 {
+    font-size: 1.4dvw;  /* было 2dvw — чуть больше */
+}
+
+.button3 {
+    font-size: 0.95dvw;  /* было 2dvw — чуть больше */
+}
+
+.button4 {
+    font-size: 1.8dvw;  /* было 2dvw — чуть больше */
+}
+
+/* ============================================================
+   ОПЦИОНАЛЬНО: одинаковая "выключенность" для всех тем
+   (если хотите, чтобы даже у цветных кнопок в disabled
+   не было цветного акцента — этот блок уже перекрывает всё)
+   ============================================================ */
+
+/* 🟠 Оранжевый */
+#button-orange { --accent: #ffa94d; --accent-rgb: 255, 169, 77; }
+
+/* 🟡 Жёлтый */
+#button-yellow { --accent: #ffe066; --accent-rgb: 255, 224, 102; }
+
+/* 🔴 Красный */
+#button-red    { --accent: #ff6b6b; --accent-rgb: 255, 107, 107; }
+
+/* 🟢 Зелёный */
+#button-green  { --accent: #69db7c; --accent-rgb: 105, 219, 124; }
+
+/* 🔵 Синий */
+#button-blue   { --accent: #74c0fc; --accent-rgb: 116, 192, 252; }
+
+/* 🟣 Фиолетовый */
+#button-purple { --accent: #b197fc; --accent-rgb: 177, 151, 252; }
+
+
+   .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    user-select: none;
+    box-sizing: border-box;
+
+    --accent: #4a90e2;
+    --accent-rgb: 74, 144, 226;
+    --progress: 0%;
+  }
+
+  /* ===== WebKit ===== */
+  .slider::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(
+      to right,
+      var(--accent) 0%,
+      var(--accent) var(--progress),
+      #2a2d34 var(--progress),
+      #2a2d34 100%
+    );
+    border: 1px solid #3a3d44;
+    transition: border-color 0.3s ease;
+  }
+
+  .slider:hover::-webkit-slider-runnable-track {
+    border-color: #4a4d54;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #1a1c20;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0.4),
+                0 2px 8px rgba(0, 0, 0, 0.6);
+    margin-top: -7px;
+    transition: all 0.2s ease;
+    cursor: grab;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background: var(--accent);
+    box-shadow: 0 0 0 6px rgba(var(--accent-rgb), 0.15),
+                0 0 16px rgba(var(--accent-rgb), 0.6);
+  }
+
+  .slider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    transform: scale(1.05);
+  }
+
+  /* ===== Firefox ===== */
+  .slider::-moz-range-track {
+    height: 6px;
+    border-radius: 3px;
+    background: #2a2d34;
+    border: 1px solid #3a3d44;
+    transition: border-color 0.3s ease;
+  }
+
+  .slider:hover::-moz-range-track {
+    border-color: #4a4d54;
+  }
+
+  .slider::-moz-range-progress {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--accent);
+  }
+
+  .slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #1a1c20;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0.4),
+                0 2px 8px rgba(0, 0, 0, 0.6);
+    transition: all 0.2s ease;
+    cursor: grab;
+  }
+
+  .slider::-moz-range-thumb:hover {
+    transform: scale(1.15);
+    background: var(--accent);
+    box-shadow: 0 0 0 6px rgba(var(--accent-rgb), 0.15),
+                0 0 16px rgba(var(--accent-rgb), 0.6);
+  }
+
+  /* ===== Фокус ===== */
+  .slider:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.35),
+                0 0 16px rgba(var(--accent-rgb), 0.6);
+  }
+
+  .slider:focus-visible::-moz-range-thumb {
+    box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.35),
+                0 0 16px rgba(var(--accent-rgb), 0.6);
+  }
+
+  /* ============================================================
+     ЦВЕТОВЫЕ ТЕМЫ ЧЕРЕЗ ID
+     Каждому слайдеру задаём свои --accent и --accent-rgb.
+     ============================================================ */
+  /* 🟠 Оранжевый */
+  #slider-orange { --accent: #ffa94d; --accent-rgb: 255, 169, 77; }
+
+  /* 🟡 Жёлтый */
+  #slider-yellow { --accent: #ffe066; --accent-rgb: 255, 224, 102; }
+
+  /* 🔴 Красный */
+  #slider-red    { --accent: #ff6b6b; --accent-rgb: 255, 107, 107; }
+
+  /* 🟢 Зелёный */
+  #slider-green  { --accent: #69db7c; --accent-rgb: 105, 219, 124; }
+
+  /* 🔵 Синий */
+  #slider-blue   { --accent: #74c0fc; --accent-rgb: 116, 192, 252; }
+
+  /* 🟣 Фиолетовый */
+  #slider-purple { --accent: #b197fc; --accent-rgb: 177, 151, 252; }
+
+
+
+
